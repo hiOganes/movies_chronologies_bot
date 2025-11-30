@@ -1,11 +1,11 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 
-menu = ReplyKeyboardMarkup(
+reply_menu = ReplyKeyboardMarkup(
     keyboard=[
-        [KeyboardButton(text='/test1'), KeyboardButton(text='/test2')],
-        [KeyboardButton(text='/marvel')],
-        [KeyboardButton(text='/test3'), KeyboardButton(text='/test4')]
+        [KeyboardButton(text='Марвел')],
+        [KeyboardButton(text='Заклятие'), KeyboardButton(text='Властелин колец')],
+        [KeyboardButton(text='Звёздные войны')]
     ],
     resize_keyboard=True,
     one_time_keyboard=True,

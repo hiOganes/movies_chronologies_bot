@@ -6,7 +6,7 @@ inline_menu = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text='Выбрать хронологию', 
-                callback_data='start'
+                callback_data='menu'
             )
         ]
     ]
