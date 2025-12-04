@@ -1,6 +1,13 @@
+import os
+
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
 CACHE = {
-    'host':'0.0.0.0',
-    'port':6380,
+    'host':os.getenv('CACHE_HOST'),
+    'port':os.getenv('CACHE_PORT'),
     'db':0,
     'decode_responses':True,
 }

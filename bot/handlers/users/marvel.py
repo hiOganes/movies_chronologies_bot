@@ -6,6 +6,7 @@ from aiogram.types import Message
 from bot.utils.cache_movies import get_cached_movies, set_cache_movies
 from bot.keyboards.inline import inline_menu
 
+
 marvel_router = Router()
 
 @marvel_router.message(F.text == 'Марвел')

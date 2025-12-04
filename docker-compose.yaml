@@ -1,0 +1,35 @@
+services:
+  cache_db:
+    image: redis:8.2-alpine               
+    container_name: movies_chronology_redis
+    restart: unless-stopped
+    ports:
+      - "0.0.0.0:6380:6379"       
+    env_file:
+      - .docker.env               
+    volumes:
+      - cache_data:/data                   
+    networks:
+      - marvel_chronology_bot
+
+  bot:
+    build: .
+    image: movies_chronologies_bot:1.0
+    container_name: movies_chronology_bot
+    restart: unless-stopped
+    depends_on:
+      - cache_db
+    env_file:
+      - .docker.env
+    volumes:
+      - chronologies_data:/bot/movies_chronologies_bot/movies_chronologies
+    networks:
+      - marvel_chronology_bot
+
+networks:
+  marvel_chronology_bot:
+    driver: bridge
+
+volumes:
+  cache_data:
+  chronologies_data:    
