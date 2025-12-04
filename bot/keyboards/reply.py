@@ -6,9 +6,10 @@ reply_menu = ReplyKeyboardMarkup(
         [KeyboardButton(text='Марвел',)],
         [
             KeyboardButton(text='Заклятие'),
-            KeyboardButton(text='Властелин колец')
+            KeyboardButton(text='Чужой')
         ],
-        [KeyboardButton(text='Звёздные войны')]
+        [KeyboardButton(text='Звёздные войны')],
+        [KeyboardButton(text='Властелин колец')]
     ],
     resize_keyboard=True,
     one_time_keyboard=True,
